@@ -41,10 +41,11 @@ function Register() {
                     name="confirmPassword"
                     onChange={(e) => handleChange(e)}
                 />
-            </form>
             <button type="submit">Create Account</button>
-            <span>Already have an Account? <Link to="/login">Login</Link>
+            <span>
+                Already have an Account? <Link to="/login">Login</Link>
             </span>
+        </form>
         </FormContainer>
     </>
     );
@@ -65,6 +66,56 @@ const FormContainer = styled.div`
         justify-content: center;
         img {
             height: 5rem;
+        }
+        h1 {
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: black;
+        border-radius: 2rem;
+        padding: 3rem 5rem;
+        input {
+            background-color: transparent;
+            padding: 1rem;
+            border: 0.1rem solid white;
+            border-radius: 0.4rem;
+            color: white;
+            width: 100%;
+            font-size: 1rem;
+            &:focus {
+                border: 0.1rem solid white;
+                outline: none;
+            }
+        }
+        button {
+            background-color: white;
+            color: black;
+            padding: 1rem 2rem;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0.4rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-color: grey;
+            }
+        }
+        span {
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
     }
 `;
